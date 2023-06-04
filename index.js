@@ -8,9 +8,6 @@ const bot = new Telegraf(process.env.TELEGRAM_SECRET_KEY);
 const app = express();
 
 
-// Middleware untuk menghubungkan Express.js dengan bot Telegraf
-app.use(bot.webhookCallback('/YOUR_WEBHOOK_PATH'));
-
 // Middleware untuk log pesan yang masuk
 bot.use(validateMessage);
 
