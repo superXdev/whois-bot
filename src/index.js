@@ -15,7 +15,7 @@ function isValidDomain(domain) {
 function validateMessage(ctx, next) {
    const message = ctx.message.text;
 
-   if (!message.includes('/start') && !isValidDomain(message)) {
+   if (!message.includes('/start') && !message.includes('/stats') && !isValidDomain(message)) {
       ctx.reply('Sorry, domain is not valid');
       return;
    }
