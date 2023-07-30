@@ -5,10 +5,29 @@ dotenv.config();
 
 import handler from './handler';
 
+// Domain validation
+function isValidDomain(domain) {
+    const regex = /^(?!www\.)(?!https?:\/\/)([a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,})(?:\/|\?|$)/;
+    return regex.test(domain);
+}
+
+// Message validation
+function validateMessage(ctx, next) {
+   const message = ctx.message.text;
+
+   if (!message.includes('/start') && !isValidDomain(message)) {
+      ctx.reply('Sorry, domain is not valid');
+      return;
+   }
+
+   next();
+}
+
 // Initialize Telegraf
 // with bot token from https://t.me/BotFather
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
+bot.use(validateMessage);
 handler(bot);
 
 console.log('Telegram bot started');

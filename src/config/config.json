@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "telegram_bot",
+    "database": "telegram_whois_bot",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "logging": false

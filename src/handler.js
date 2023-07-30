@@ -1,9 +1,8 @@
-import { welcome, help, sticker, greeting, stats } from './controllers/example';
+import { welcome, help, stats, enumDomain } from './controllers/main';
 
 export default function handler(bot) {
     bot.start(welcome);
     bot.help(help);
-    bot.on('sticker', sticker);
-    bot.hears('hi', greeting);
+    bot.on('text', enumDomain);
     bot.command('stats', stats);
 }
