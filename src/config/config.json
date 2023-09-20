@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "telegram_whois_bot",
-    "host": "127.0.0.1",
+    "username": "sql12647491",
+    "password": "uX4z81W9gv",
+    "database": "sql12647491",
+    "host": "sql12.freemysqlhosting.net",
     "dialect": "mysql",
     "logging": false
   },

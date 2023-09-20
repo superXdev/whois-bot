@@ -75,6 +75,13 @@ export async function enumDomain(ctx) {
     }
 }
 
+export function about(ctx) {
+    ctx.reply(`'Whois' bot is your go-to tool for instant domain information retrieval. Simply enter a domain name, and let the bot do the rest. It swiftly provides you with comprehensive details about the domain, including registration information, owner contact details, DNS records, and more.
+
+
+Site: https://bots8.com`);
+}
+
 
 /**
  * Show help message 
